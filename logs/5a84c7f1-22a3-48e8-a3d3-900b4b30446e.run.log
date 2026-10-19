@@ -1,0 +1,205 @@
+2026-10-18 19:42:21.357 | INFO | run step begin: 登录，获取token >>>>>>
+2026-10-18 19:42:21.358 | DEBUG | ====== request details ======
+url: https://httpbin.org/post
+method: POST
+params: {}
+data: None
+cookies: {}
+timeout: 120
+allow_redirects: True
+verify: False
+headers: {
+    "HRUN-Request-ID": "HRUN-5a84c7f1-22a3-48e8-a3d3-900b4b30446e-741358"
+}
+json: {
+    "username": "admin",
+    "password": "123456"
+}
+
+2026-10-18 19:42:22.342 | DEBUG | client IP: 192.168.0.141, Port: 61295
+2026-10-18 19:42:22.342 | DEBUG | server IP: 100.56.179.159, Port: 443
+2026-10-18 19:42:22.343 | DEBUG | 
+================== request details ==================
+method   : MethodEnum.POST
+url      : https://httpbin.org/post
+headers  : {
+    "User-Agent": "python-requests/2.34.2",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Accept": "*/*",
+    "Connection": "keep-alive",
+    "HRUN-Request-ID": "HRUN-5a84c7f1-22a3-48e8-a3d3-900b4b30446e-741358",
+    "Content-Length": "43",
+    "Content-Type": "application/json"
+}
+cookies  : {}
+body     : {
+    "username": "admin",
+    "password": "123456"
+}
+
+2026-10-18 19:42:22.344 | DEBUG | 
+================== response details ==================
+status_code : 200
+headers  : {
+    "Date": "Sun, 18 Oct 2026 11:42:22 GMT",
+    "Content-Type": "application/json",
+    "Content-Length": "625",
+    "Connection": "keep-alive",
+    "Server": "gunicorn/19.9.0",
+    "Access-Control-Allow-Origin": "*",
+    "Access-Control-Allow-Credentials": "true"
+}
+cookies  : {}
+encoding : utf-8
+content_type : application/json
+body     : {
+    "args": {},
+    "data": "{\"username\": \"admin\", \"password\": \"123456\"}",
+    "files": {},
+    "form": {},
+    "headers": {
+        "Accept": "*/*",
+        "Accept-Encoding": "gzip, deflate, br",
+        "Content-Length": "43",
+        "Content-Type": "application/json",
+        "Host": "httpbin.org",
+        "Hrun-Request-Id": "HRUN-5a84c7f1-22a3-48e8-a3d3-900b4b30446e-741358",
+        "User-Agent": "python-requests/2.34.2",
+        "X-Amzn-Trace-Id": "Root=1-6ad4b09e-2f4701b226c6cd1078f6d4dc"
+    },
+    "json": {
+        "password": "123456",
+        "username": "admin"
+    },
+    "origin": "113.109.196.56",
+    "url": "https://httpbin.org/post"
+}
+
+2026-10-18 19:42:22.344 | INFO | status_code: 200, response_time(ms): 984.01 ms, response_length: 0 bytes
+2026-10-18 19:42:22.347 | DEBUG | ====== response details ======
+status_code: 200
+headers: {
+    "Date": "Sun, 18 Oct 2026 11:42:22 GMT",
+    "Content-Type": "application/json",
+    "Content-Length": "625",
+    "Connection": "keep-alive",
+    "Server": "gunicorn/19.9.0",
+    "Access-Control-Allow-Origin": "*",
+    "Access-Control-Allow-Credentials": "true"
+}
+body: {
+    "args": {},
+    "data": "{\"username\": \"admin\", \"password\": \"123456\"}",
+    "files": {},
+    "form": {},
+    "headers": {
+        "Accept": "*/*",
+        "Accept-Encoding": "gzip, deflate, br",
+        "Content-Length": "43",
+        "Content-Type": "application/json",
+        "Host": "httpbin.org",
+        "Hrun-Request-Id": "HRUN-5a84c7f1-22a3-48e8-a3d3-900b4b30446e-741358",
+        "User-Agent": "python-requests/2.34.2",
+        "X-Amzn-Trace-Id": "Root=1-6ad4b09e-2f4701b226c6cd1078f6d4dc"
+    },
+    "json": {
+        "password": "123456",
+        "username": "admin"
+    },
+    "origin": "113.109.196.56",
+    "url": "https://httpbin.org/post"
+}
+
+2026-10-18 19:42:22.347 | INFO | extract mapping: {'token': 'admin'}
+2026-10-18 19:42:22.349 | INFO | assert status_code equal 200(int)	==> pass
+2026-10-18 19:42:22.350 | INFO | run step end: 登录，获取token <<<<<<
+
+2026-10-18 19:42:22.351 | INFO | run step begin: 携带token访问接口 >>>>>>
+2026-10-18 19:42:22.352 | DEBUG | ====== request details ======
+url: https://httpbin.org/headers
+method: GET
+params: {}
+data: None
+cookies: {}
+timeout: 120
+allow_redirects: True
+verify: False
+headers: {
+    "Authorization": "Bearer admin",
+    "HRUN-Request-ID": "HRUN-5a84c7f1-22a3-48e8-a3d3-900b4b30446e-742352"
+}
+json: None
+
+2026-10-18 19:42:22.574 | DEBUG | client IP: 192.168.0.141, Port: 61295
+2026-10-18 19:42:22.574 | DEBUG | server IP: 100.56.179.159, Port: 443
+2026-10-18 19:42:22.575 | DEBUG | 
+================== request details ==================
+method   : MethodEnum.GET
+url      : https://httpbin.org/headers
+headers  : {
+    "User-Agent": "python-requests/2.34.2",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Accept": "*/*",
+    "Connection": "keep-alive",
+    "Authorization": "Bearer admin",
+    "HRUN-Request-ID": "HRUN-5a84c7f1-22a3-48e8-a3d3-900b4b30446e-742352"
+}
+cookies  : {}
+body     : None
+
+2026-10-18 19:42:22.575 | DEBUG | 
+================== response details ==================
+status_code : 200
+headers  : {
+    "Date": "Sun, 18 Oct 2026 11:42:22 GMT",
+    "Content-Type": "application/json",
+    "Content-Length": "343",
+    "Connection": "keep-alive",
+    "Server": "gunicorn/19.9.0",
+    "Access-Control-Allow-Origin": "*",
+    "Access-Control-Allow-Credentials": "true"
+}
+cookies  : {}
+encoding : utf-8
+content_type : application/json
+body     : {
+    "headers": {
+        "Accept": "*/*",
+        "Accept-Encoding": "gzip, deflate, br",
+        "Authorization": "Bearer admin",
+        "Host": "httpbin.org",
+        "Hrun-Request-Id": "HRUN-5a84c7f1-22a3-48e8-a3d3-900b4b30446e-742352",
+        "User-Agent": "python-requests/2.34.2",
+        "X-Amzn-Trace-Id": "Root=1-6ad4b09e-1587d8b357d237805e51aded"
+    }
+}
+
+2026-10-18 19:42:22.575 | INFO | status_code: 200, response_time(ms): 221.88 ms, response_length: 0 bytes
+2026-10-18 19:42:22.576 | DEBUG | ====== response details ======
+status_code: 200
+headers: {
+    "Date": "Sun, 18 Oct 2026 11:42:22 GMT",
+    "Content-Type": "application/json",
+    "Content-Length": "343",
+    "Connection": "keep-alive",
+    "Server": "gunicorn/19.9.0",
+    "Access-Control-Allow-Origin": "*",
+    "Access-Control-Allow-Credentials": "true"
+}
+body: {
+    "headers": {
+        "Accept": "*/*",
+        "Accept-Encoding": "gzip, deflate, br",
+        "Authorization": "Bearer admin",
+        "Host": "httpbin.org",
+        "Hrun-Request-Id": "HRUN-5a84c7f1-22a3-48e8-a3d3-900b4b30446e-742352",
+        "User-Agent": "python-requests/2.34.2",
+        "X-Amzn-Trace-Id": "Root=1-6ad4b09e-1587d8b357d237805e51aded"
+    }
+}
+
+2026-10-18 19:42:22.576 | INFO | assert status_code equal 200(int)	==> pass
+2026-10-18 19:42:22.576 | INFO | assert body.headers.Authorization equal Bearer admin(str)	==> pass
+2026-10-18 19:42:22.577 | INFO | run step end: 携带token访问接口 <<<<<<
+
+2026-10-18 19:42:22.577 | INFO | generate testcase log: C:\Users\DELL\Desktop\pythonProject\demo_api\logs\5a84c7f1-22a3-48e8-a3d3-900b4b30446e.run.log

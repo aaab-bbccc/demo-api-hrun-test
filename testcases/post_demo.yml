@@ -1,0 +1,16 @@
+config:
+  name: POST接口演示
+  base_url: "https://httpbin.org"
+
+teststeps:
+  - name: 提交JSON请求体
+    request:
+      method: POST
+      url: /post
+      json:
+        username: "api_test"
+        age: 24
+    validate:
+      - eq: [status_code, 200]
+      - eq: [body.json.username, "api_test"]
+      - eq: [body.json.age, 24]

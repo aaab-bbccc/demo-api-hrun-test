@@ -1,0 +1,12 @@
+config:
+  name: "第一个HttpRunner测试用例"
+  base_url: "https://httpbin.org"
+
+teststeps:
+  - name: 测试get请求
+    request:
+      method: GET
+      url: /get
+    validate:
+      - eq: [status_code, 200]
+      - eq: [content.url, "https://httpbin.org/get"]

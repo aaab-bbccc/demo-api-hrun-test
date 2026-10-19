@@ -1,0 +1,26 @@
+config:
+  name: token提取&传参演示
+  base_url: "https://httpbin.org"
+
+teststeps:
+  - name: 登录，获取token
+    request:
+      method: POST
+      url: /post
+      json:
+        username: "admin"
+        password: "123456"
+    validate:
+      - eq: [status_code, 200]
+    extract:
+      - token: body.json.username
+
+  - name: 携带token访问接口
+    request:
+      method: GET
+      url: /headers
+      headers:
+        Authorization: "Bearer ${token}"
+    validate:
+      - eq: [status_code, 200]
+      - eq: [body.headers.Authorization, "Bearer admin"]

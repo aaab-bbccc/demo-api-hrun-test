@@ -1,0 +1,91 @@
+2026-10-18 18:55:12.956 | INFO | run step begin: ²âÊÔgetÇëÇó >>>>>>
+2026-10-18 18:55:12.958 | DEBUG | ====== request details ======
+url: https://httpbin.org/get
+method: GET
+params: {}
+data: None
+cookies: {}
+timeout: 120
+allow_redirects: True
+verify: False
+headers: {
+    "HRUN-Request-ID": "HRUN-094d8688-4037-4a85-96a6-8dd06fad4b74-912958"
+}
+json: None
+
+2026-10-18 18:55:14.039 | DEBUG | client IP: 192.168.0.141, Port: 56111
+2026-10-18 18:55:14.039 | DEBUG | server IP: 34.227.237.26, Port: 443
+2026-10-18 18:55:14.041 | DEBUG | 
+================== request details ==================
+method   : MethodEnum.GET
+url      : https://httpbin.org/get
+headers  : {
+    "User-Agent": "python-requests/2.34.2",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Accept": "*/*",
+    "Connection": "keep-alive",
+    "HRUN-Request-ID": "HRUN-094d8688-4037-4a85-96a6-8dd06fad4b74-912958"
+}
+cookies  : {}
+body     : None
+
+2026-10-18 18:55:14.041 | DEBUG | 
+================== response details ==================
+status_code : 200
+headers  : {
+    "Date": "Sun, 18 Oct 2026 10:55:14 GMT",
+    "Content-Type": "application/json",
+    "Content-Length": "388",
+    "Connection": "keep-alive",
+    "Server": "gunicorn/19.9.0",
+    "Access-Control-Allow-Origin": "*",
+    "Access-Control-Allow-Credentials": "true"
+}
+cookies  : {}
+encoding : utf-8
+content_type : application/json
+body     : {
+    "args": {},
+    "headers": {
+        "Accept": "*/*",
+        "Accept-Encoding": "gzip, deflate, br",
+        "Host": "httpbin.org",
+        "Hrun-Request-Id": "HRUN-094d8688-4037-4a85-96a6-8dd06fad4b74-912958",
+        "User-Agent": "python-requests/2.34.2",
+        "X-Amzn-Trace-Id": "Root=1-6ad4a592-25cbe74251959f195eba76fd"
+    },
+    "origin": "113.109.196.56",
+    "url": "https://httpbin.org/get"
+}
+
+2026-10-18 18:55:14.041 | INFO | status_code: 200, response_time(ms): 1081.78 ms, response_length: 0 bytes
+2026-10-18 18:55:14.041 | DEBUG | ====== response details ======
+status_code: 200
+headers: {
+    "Date": "Sun, 18 Oct 2026 10:55:14 GMT",
+    "Content-Type": "application/json",
+    "Content-Length": "388",
+    "Connection": "keep-alive",
+    "Server": "gunicorn/19.9.0",
+    "Access-Control-Allow-Origin": "*",
+    "Access-Control-Allow-Credentials": "true"
+}
+body: {
+    "args": {},
+    "headers": {
+        "Accept": "*/*",
+        "Accept-Encoding": "gzip, deflate, br",
+        "Host": "httpbin.org",
+        "Hrun-Request-Id": "HRUN-094d8688-4037-4a85-96a6-8dd06fad4b74-912958",
+        "User-Agent": "python-requests/2.34.2",
+        "X-Amzn-Trace-Id": "Root=1-6ad4a592-25cbe74251959f195eba76fd"
+    },
+    "origin": "113.109.196.56",
+    "url": "https://httpbin.org/get"
+}
+
+2026-10-18 18:55:14.042 | INFO | assert status_code equal 200(int)	==> pass
+2026-10-18 18:55:14.042 | INFO | assert body.url equal https://httpbin.org/get(str)	==> pass
+2026-10-18 18:55:14.043 | INFO | run step end: ²âÊÔgetÇëÇó <<<<<<
+
+2026-10-18 18:55:14.043 | INFO | generate testcase log: C:\Users\DELL\Desktop\pythonProject\demo_api\logs\094d8688-4037-4a85-96a6-8dd06fad4b74.run.log

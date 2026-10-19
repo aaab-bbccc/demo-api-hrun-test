@@ -1,0 +1,124 @@
+2026-10-18 19:01:52.621 | INFO | run step begin: 提交JSON请求体 >>>>>>
+2026-10-18 19:01:52.623 | DEBUG | ====== request details ======
+url: https://httpbin.org/post
+method: POST
+params: {}
+data: None
+cookies: {}
+timeout: 120
+allow_redirects: True
+verify: False
+headers: {
+    "HRUN-Request-ID": "HRUN-82c393e0-c13e-4e6e-8e97-7bacdb9225aa-312623"
+}
+json: {
+    "username": "api_test",
+    "age": 24
+}
+
+2026-10-18 19:01:54.820 | DEBUG | client IP: 192.168.0.141, Port: 51158
+2026-10-18 19:01:54.820 | DEBUG | server IP: 34.227.237.26, Port: 443
+2026-10-18 19:01:54.820 | DEBUG | 
+================== request details ==================
+method   : MethodEnum.POST
+url      : https://httpbin.org/post
+headers  : {
+    "User-Agent": "python-requests/2.34.2",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Accept": "*/*",
+    "Connection": "keep-alive",
+    "HRUN-Request-ID": "HRUN-82c393e0-c13e-4e6e-8e97-7bacdb9225aa-312623",
+    "Content-Length": "35",
+    "Content-Type": "application/json"
+}
+cookies  : {}
+body     : {
+    "username": "api_test",
+    "age": 24
+}
+
+2026-10-18 19:01:54.823 | DEBUG | 
+================== response details ==================
+status_code : 200
+headers  : {
+    "Date": "Sun, 18 Oct 2026 11:01:55 GMT",
+    "Content-Type": "application/json",
+    "Content-Length": "607",
+    "Connection": "keep-alive",
+    "Server": "gunicorn/19.9.0",
+    "Access-Control-Allow-Origin": "*",
+    "Access-Control-Allow-Credentials": "true"
+}
+cookies  : {}
+encoding : utf-8
+content_type : application/json
+body     : {
+    "args": {},
+    "data": "{\"username\": \"api_test\", \"age\": 24}",
+    "files": {},
+    "form": {},
+    "headers": {
+        "Accept": "*/*",
+        "Accept-Encoding": "gzip, deflate, br",
+        "Content-Length": "35",
+        "Content-Type": "application/json",
+        "Host": "httpbin.org",
+        "Hrun-Request-Id": "HRUN-82c393e0-c13e-4e6e-8e97-7bacdb9225aa-312623",
+        "User-Agent": "python-requests/2.34.2",
+        "X-Amzn-Trace-Id": "Root=1-6ad4a723-05bb4c5511a51b532a941b8c"
+    },
+    "json": {
+        "age": 24,
+        "username": "api_test"
+    },
+    "origin": "113.109.196.56",
+    "url": "https://httpbin.org/post"
+}
+
+2026-10-18 19:01:54.823 | INFO | status_code: 200, response_time(ms): 2196.95 ms, response_length: 0 bytes
+2026-10-18 19:01:54.823 | DEBUG | ====== response details ======
+status_code: 200
+headers: {
+    "Date": "Sun, 18 Oct 2026 11:01:55 GMT",
+    "Content-Type": "application/json",
+    "Content-Length": "607",
+    "Connection": "keep-alive",
+    "Server": "gunicorn/19.9.0",
+    "Access-Control-Allow-Origin": "*",
+    "Access-Control-Allow-Credentials": "true"
+}
+body: {
+    "args": {},
+    "data": "{\"username\": \"api_test\", \"age\": 24}",
+    "files": {},
+    "form": {},
+    "headers": {
+        "Accept": "*/*",
+        "Accept-Encoding": "gzip, deflate, br",
+        "Content-Length": "35",
+        "Content-Type": "application/json",
+        "Host": "httpbin.org",
+        "Hrun-Request-Id": "HRUN-82c393e0-c13e-4e6e-8e97-7bacdb9225aa-312623",
+        "User-Agent": "python-requests/2.34.2",
+        "X-Amzn-Trace-Id": "Root=1-6ad4a723-05bb4c5511a51b532a941b8c"
+    },
+    "json": {
+        "age": 24,
+        "username": "api_test"
+    },
+    "origin": "113.109.196.56",
+    "url": "https://httpbin.org/post"
+}
+
+2026-10-18 19:01:54.823 | INFO | assert status_code equal 200(int)	==> pass
+2026-10-18 19:01:54.824 | ERROR | assert body.json.json.username equal api_test(str)	==> fail
+check_item: body.json.json.username
+check_value: None(NoneType)
+assert_method: equal
+expect_value: api_test(str)
+2026-10-18 19:01:54.825 | ERROR | assert body.json.json.age equal 24(int)	==> fail
+check_item: body.json.json.age
+check_value: None(NoneType)
+assert_method: equal
+expect_value: 24(int)
+2026-10-18 19:01:54.827 | INFO | generate testcase log: C:\Users\DELL\Desktop\pythonProject\demo_api\logs\82c393e0-c13e-4e6e-8e97-7bacdb9225aa.run.log
